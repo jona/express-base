@@ -20,12 +20,15 @@
     "errorface": "^0.1.2",
     "express": "~4.12.0",
     "express-session": "^1.10.4",
+    "express-winston": "^0.4.1",
     "glob": "~4.4.1",
     "method-override": "~2.3.0",
     "mongoose": "~3.8.20",
     "morgan": "~1.5.0",
     "request": "^2.53.0",
-    "serve-favicon": "~2.2.0"
+    "serve-favicon": "~2.2.0",
+    "winston": "^2.1.1",
+    "winston-null": "^1.0.1"
   },
   "devDependencies": {
     "babelify": "^6.1.0",

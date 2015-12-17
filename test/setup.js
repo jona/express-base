@@ -1,7 +1,6 @@
 process.env.NODE_ENV = 'test';
 
 var nock = require('nock'),
-    config = require('config'),
     chai = require('chai'),
     sinon = require('sinon'),
     url = require('url');
@@ -15,8 +14,7 @@ beforeEach(function() {
   nock.enableNetConnect({
     test: function(host) {
       var validHosts = [
-        '127.0.0.1',
-        url.parse(config.get('auth.url')).host
+        '127.0.0.1'
       ];
       var hostname = host.split(':')[0];
 

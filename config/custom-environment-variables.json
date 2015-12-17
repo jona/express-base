@@ -1,17 +1,5 @@
 {
   "port": "PORT",
-  "mongo": {
-    "host": "DB_HOST",
-    "port": "DB_PORT"
-  },
-  "auth": {
-    "host": "AUTH_HOST",
-    "url": "AUTH_URL",
-    "token": "AUTH_TOKEN"
-  },
-  "alchemy": {
-    "host": "ALCHEMY_HOST"
-  },
   "redis": {
     "host": "REDIS_HOST",
     "port": "REDIS_PORT"
