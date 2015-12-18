@@ -5,8 +5,9 @@ Base for starting an express app
 
 1. Clone repo
 2. Replace `APP_NAME` with the name of your app through out the repo
-3. Run `docker-compose run app gulp bwr`
-4. Run `docker-compose up`
+3. Run `docker-compose build`
+4. Run `docker-compose run app gulp bwr`
+5. Run `docker-compose up`
 
 ## Docker Compose
 Fully dockerized and ready to run on your dev server. See the [docker-compose.yml](/docker-compose.yml) file.

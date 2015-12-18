@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     buffer = require('vinyl-buffer'),
     source = require('vinyl-source-stream'),
     browserify = require('browserify'),
-    watchify = require('watchify'),
     reactify = require('reactify'),
     babelify = require("babelify"),
     gutil = require('gulp-util'),
@@ -16,18 +15,14 @@ var customOpts = {
     extensions: ['.jsx'],
     insertGlobals: true,
     standalone: 'APP_NAME',
-    debug: true
+    debug: true,
+    transform: [reactify, babelify]
 };
 
-var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts));
-
-b.transform(reactify);
-b.transform(babelify);
+var opts = assign({}, customOpts);
+var b = browserify(opts);
 
 gulp.task('compile:scripts', ['compile:clean'], bundle);
-b.on('update', bundle);
-b.on('log', gutil.log);
 
 function bundle() {
   return b.bundle()

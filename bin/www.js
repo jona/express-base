@@ -1,5 +1,4 @@
-var newrelic = require('newrelic'),
-    config = require('config'),
+var config = require('config'),
     app = require('../app');
 
 app.set('port', config.get('port'));
