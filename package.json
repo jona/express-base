@@ -10,7 +10,8 @@
     "test": "mocha",
     "start": "node bin/www.js",
     "build-bwr": "gulp bwr",
-    "build": "gulp build"
+    "build": "gulp build",
+    "dev-start": "gulp"
   },
   "dependencies": {
     "body-parser": "~1.12.0",
